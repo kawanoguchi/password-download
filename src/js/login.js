@@ -12,6 +12,7 @@
       console.log(res);
       switch (res.status) {
         case 200: {
+          sessionStorage.setItem("hh-key", "hogehogehoge");
           window.location = url;
           break;
         }
@@ -25,23 +26,6 @@
       message.innerHTML = "システムエラー";
       input.value = "";
     }
-    // const xhr = new XMLHttpRequest();
-    // xhr.open("GET", url);
-    // xhr.send();
-    // xhr.onload = function () {
-    //   if (xhr.readyState === 4 && xhr.status === 200) {
-    //     window.location = url;
-    //   } else {
-    //     const message = document.getElementById("message");
-    //     const input = document.getElementById("password");
-    //     message.innerHTML = "Wrong password! Try again.";
-    //     input.value = "";
-    //   }
-    // };
-    // xhr.onerror = function () {
-    //   const message = document.getElementById("message");
-    //   message.innerHTML = "Sorry, ERROR !";
-    // };
   };
 
   //sha256ハッシュ関数
